@@ -95,7 +95,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                   Свържете се с мен
                 </Button>
               </Link>
-              <Link href="/blog">
+              <Link href="/blogs">
                 <Button size="lg" variant="outline">
                   Прочетете още статии
                 </Button>
