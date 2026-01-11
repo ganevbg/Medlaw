@@ -32,7 +32,7 @@ export default function AdminLoginPage() {
 
     if (!res.ok) {
       const j = await res.json().catch(() => null)
-      setErr(j?.error ?? "Неуспешен вход")
+      setErr(j?.error ?? "Неуспешен вход!")
       return
     }
 
