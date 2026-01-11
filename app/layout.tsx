@@ -1,0 +1,49 @@
+import type React from "react"
+import type { Metadata } from "next"
+import { Inter, Playfair_Display } from "next/font/google"
+import "./globals.css"
+import Header from "@/components/header/header"
+import Footer from "@/components/footer"
+
+const _inter = Inter({ subsets: ["latin", "cyrillic"] })
+const _playfair = Playfair_Display({ subsets: ["latin", "cyrillic"] })
+
+export const metadata: Metadata = {
+  title: "Медицинско & Академично Право | Експертна правна защита",
+  description:
+    "Над 15 години опит в болничния мениджмънт, академичните процедури и съдебната практика по медицински деликти.",
+  generator: "v0.app",
+  icons: {
+    icon: [
+      {
+        url: "/icon-light-32x32.png",
+        media: "(prefers-color-scheme: light)",
+      },
+      {
+        url: "/icon-dark-32x32.png",
+        media: "(prefers-color-scheme: dark)",
+      },
+      {
+        url: "/icon.svg",
+        type: "image/svg+xml",
+      },
+    ],
+    apple: "/apple-icon.png",
+  },
+}
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode
+}>) {
+  return (
+    <html lang="bg">
+      <body className={`font-sans antialiased`}>
+        <Header />
+        {children}
+        <Footer />
+      </body>
+    </html>
+  )
+}
