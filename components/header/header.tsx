@@ -15,17 +15,24 @@ export default async function Header() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="text-xl font-serif font-bold text-primary">
-              Медикъллоул-Консулт
+                          СДРУЖЕНИЕ НА ЮРИСТИТЕ 
             </Link>
-            <p className="text-xs text-muted-foreground">Медицинско & Академично Право</p>
+                      <p className="text-xs text-muted-foreground">ВЪВ ВИСШЕТО МЕДИЦИНСКО ОБРАЗОВАНИЕ</p>
           </div>
 
           {/* Desktop */}
           <div className="hidden md:flex items-center gap-8">
-            <Link href="/#" className="text-sm font-medium hover:text-primary transition-colors">Начало</Link>
-            <Link href="/#services" className="text-sm font-medium hover:text-primary transition-colors">Услуги</Link>
-            <Link href="/#expertise" className="text-sm font-medium hover:text-primary transition-colors">Експертиза</Link>
-            <Link href="/#blog" className="text-sm font-medium hover:text-primary transition-colors">Блог</Link>
+                      <Link href="/#" className="text-sm font-medium hover:text-primary transition-colors">Начало</Link>
+                      <Link href="/about" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+                          За нас
+                      </Link>
+                      <Link href="/board" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+                          Управителен съвет
+                      </Link>
+                      <Link href="/membership" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+                          Членство
+                      </Link>
+            <Link href="/#blog" className="text-sm font-medium hover:text-primary transition-colors">Позиции и публикации</Link>
             <Link href="/#contact" className="text-sm font-medium hover:text-primary transition-colors">Контакти</Link>
 
             {/* Admin */}
