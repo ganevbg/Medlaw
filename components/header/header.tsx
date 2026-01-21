@@ -9,8 +9,8 @@ export default async function Header() {
     const isAdmin = await requireAdmin()
 
     return (
-        <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-            <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <nav className="sticky top-0 z-50 w-full bg-background shadow-sm">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-20">
                     {/* Logo */}
                     <div className="flex-shrink-0">
@@ -59,7 +59,7 @@ export default async function Header() {
                     {/* Mobile menu (client component) */}
                     <MobileMenu isAdmin={isAdmin} />
                 </div>
-            </nav>
-        </header>
+            </div>
+        </nav>
     )
 }

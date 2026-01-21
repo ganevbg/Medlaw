@@ -9,13 +9,13 @@ export default function MobileMenu({ isAdmin }: { isAdmin: boolean }) {
     const [open, setOpen] = useState(false)
 
     return (
-        <div className="md:hidden">
-            <button className="p-2" onClick={() => setOpen((v) => !v)} aria-label="Toggle menu">
+        <div>
+            <button className="md:hidden p-2" onClick={() => setOpen((v) => !v)} aria-label="Toggle menu">
                 {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
 
             {open && (
-                <div className="absolute top-full left-0 right-0 bg-background border-b border-border shadow-lg">
+                <div className="md:hidden fixed top-20 left-0 right-0 bg-background border-b border-border shadow-lg z-50">
                     <div className="container mx-auto px-4 py-6">
                         <nav className="flex flex-col gap-1">
                             <Link
