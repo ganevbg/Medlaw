@@ -15,10 +15,7 @@ export default async function Header() {
                     {/* Logo */}
                     <div className="flex-shrink-0">
                         <Link href="/" className="text-xl font-serif font-bold text-primary">
-                            <>
-                                СДРУЖЕНИЕ НА ЮРИСТИТЕ
-                                <p className="text-xs text-muted-foreground">ВЪВ ВИСШЕТО МЕДИЦИНСКО ОБРАЗОВАНИЕ</p>
-                            </>
+                            <img src="/logo.svg" className="h-12 w-auto" alt="Medlaw" />
                         </Link>
                     </div>
 

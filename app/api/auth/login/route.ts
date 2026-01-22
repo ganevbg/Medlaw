@@ -13,10 +13,6 @@ export async function POST(req: Request) {
   const hash = process.env.ADMIN_PASSWORD_HASH!;
   const ok = await bcrypt.compare(p, hash);
 
-  console.log("u:", username);
-console.log("env user:", process.env.ADMIN_USERNAME);
-console.log("hash len:", process.env.ADMIN_PASSWORD_HASH?.length);
-console.log("hash starts:", process.env.ADMIN_PASSWORD_HASH?.slice(0, 4));
 
   if (!ok) return Response.json({ error: "Невалидни данни за вход" }, { status: 401 });
 
