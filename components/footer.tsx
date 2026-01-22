@@ -16,12 +16,12 @@ export default function Footer() {
                         <h4 className="font-bold mb-4">Връзки</h4>
                         <ul className="space-y-2 text-sm">
                             <li>
-                                <a href="#blog" className="opacity-80 hover:opacity-100 transition-opacity">
+                                <a href="/#blog" className="opacity-80 hover:opacity-100 transition-opacity">
                                     Позиции и публикации
                                 </a>
                             </li>
                             <li>
-                                <a href="#contact" className="opacity-80 hover:opacity-100 transition-opacity">
+                                <a href="/#contact" className="opacity-80 hover:opacity-100 transition-opacity">
                                     Контакти
                                 </a>
                             </li>
@@ -46,7 +46,7 @@ export default function Footer() {
                             <a href="#" className="opacity-80 hover:opacity-100 transition-opacity" aria-label="LinkedIn">
                                 <Linkedin className="h-5 w-5" />
                             </a>
-                            <a href="https://www.facebook.com/profile.php?id=61585557295760" target="_blank" className="opacity-80 hover:opacity-100 transition-opacity" aria-label="Facebook">
+                            <a href="#" className="opacity-80 hover:opacity-100 transition-opacity" aria-label="Facebook">
                                 <Facebook className="h-5 w-5" />
                             </a>
                         </div>
