@@ -21,7 +21,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           <Link href="/blogs">
             <Button variant="ghost" size="sm" className="gap-2">
               <ArrowLeft className="h-4 w-4" />
-              Обратно към статиите
+              Обратно към публикациите
             </Button>
           </Link>
         </div>
@@ -97,7 +97,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               </Link>
               <Link href="/blogs">
                 <Button size="lg" variant="outline">
-                  Прочетете още статии
+                  Прочетете още публикации
                 </Button>
               </Link>
             </div>

@@ -75,7 +75,7 @@ export default function PostForm({
               className="text-base"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
-              placeholder="Въведете заглавие на статията..."
+              placeholder="Въведете заглавие на публикацята..."
             />
           </div>
 
@@ -104,7 +104,7 @@ export default function PostForm({
               className="min-h-20 resize-none"
               value={excerpt ?? ""}
               onChange={(e) => setExcerpt(e.target.value)}
-              placeholder="Кратко резюме на статията за визуализация в списъка..."
+              placeholder="Кратко резюме на публикацята за визуализация в списъка..."
             />
           </div>
 
@@ -117,7 +117,7 @@ export default function PostForm({
               className="size-4 cursor-pointer rounded border-input accent-primary"
             />
             <Label htmlFor="published" className="cursor-pointer font-medium text-foreground">
-              Публикувана статия
+              Публикувана публикаця
             </Label>
           </div>
         </div>
@@ -129,7 +129,7 @@ export default function PostForm({
 
         <div className="flex items-center justify-end gap-3 pt-2">
           <Button onClick={submit} disabled={saving} size="lg" className="min-w-32">
-            {saving ? "Записване..." : "Запази статията"}
+            {saving ? "Записване..." : "Запази публикацята"}
           </Button>
         </div>
       </CardContent>

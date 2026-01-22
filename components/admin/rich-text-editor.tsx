@@ -42,7 +42,7 @@ export default function RichTextEditor({ value, onChange }: RichTextEditorProps)
         },
       }),
       Placeholder.configure({
-        placeholder: "Започнете да пишете съдържанието на статията...",
+        placeholder: "Започнете да пишете съдържанието на публикацята...",
       }),
     ],
     content: value,

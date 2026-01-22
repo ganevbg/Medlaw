@@ -21,7 +21,7 @@ export default async function BlogPage() {
               Анализи и коментари
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed text-pretty">
-              Експертни статии по актуални теми в медицинското и академичното право, съдебна практика и правни анализи.
+              Експертни публикации по актуални теми в медицинското и академичното право, съдебна практика и правни анализи.
             </p>
           </div>
         </div>
@@ -32,7 +32,7 @@ export default async function BlogPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {posts.length === 0 ? (
             <div className="text-center py-16">
-              <p className="text-lg text-muted-foreground">Все още няма публикувани статии.</p>
+              <p className="text-lg text-muted-foreground">Все още няма публикувани публикации.</p>
             </div>
           ) : (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">

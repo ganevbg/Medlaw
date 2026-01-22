@@ -70,7 +70,7 @@ export default function MobileMenu({ isAdmin }: { isAdmin: boolean }) {
                                         onClick={() => setOpen(false)}
                                         className="flex items-center px-4 py-3 text-base font-medium text-foreground hover:bg-muted hover:text-primary rounded-lg transition-colors"
                                     >
-                                        Статии
+                                        Публикации
                                     </Link>
                                     <div className="px-4">
                                         <LogoutButton />

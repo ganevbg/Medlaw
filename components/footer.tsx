@@ -32,10 +32,9 @@ export default function Footer() {
                     <div>
                         <h4 className="font-bold mb-4">Контакти</h4>
                         <ul className="space-y-2 text-sm opacity-80">
-                            <li>гр. София</li>
-                            <li>ул. [Адрес]</li>
-                            <li>+359 XXX XXX XXX</li>
-                            <li>contact@example.bg</li>
+                            <li><a href="https://share.google/XPSjgwTnS1cDYe2ON" target="_blank" >{process.env["address"]}</a> </li>
+                            <li><a href={`tel:${process.env["phone"]}`} >{process.env["phone"]}</a> </li>
+                            <li><a href={`mailto:${process.env["email"]}`} >{process.env["email"]}</a> </li>
                         </ul>
                     </div>
                 </div>

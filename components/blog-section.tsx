@@ -23,7 +23,7 @@ export default async function BlogSection() {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-4">Анализи и коментари</h2>
           <p className="text-lg text-muted-foreground">
-            Експертни статии по актуални теми в медицинското и академичното право.
+            Експертни публикации по актуални теми в медицинското и академичното право.
           </p>
         </div>
 
@@ -43,7 +43,7 @@ export default async function BlogSection() {
                 </div>
                 <h3 className="text-xl font-bold text-foreground leading-tight">{article.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  {article.excerpt || "Прочетете пълната статия за повече информация."}
+                  {article.excerpt || "Прочетете пълната публикаця за повече информация."}
                 </p>
                 <Link href={`/blogs/${article.slug}`} className="inline-block">
                   <Button variant="link" className="p-0 h-auto text-primary">
@@ -58,7 +58,7 @@ export default async function BlogSection() {
         <div className="text-center">
           <Link href="/blogs">
             <Button variant="outline" size="lg">
-              Виж всички статии
+              Виж всички публикации
             </Button>
           </Link>
         </div>

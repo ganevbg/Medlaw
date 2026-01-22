@@ -65,18 +65,13 @@ export default function BoardPage() {
                 <CardContent className="p-0">
                   <div className="grid md:grid-cols-3 gap-0">
                     {/* Photo */}
-                    <div className="bg-muted aspect-square md:aspect-auto">
-                      <div className="w-full h-full min-h-[300px] bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
+                      <div className="w-full">
                         <div className="text-center">
-                          <div className="w-32 h-32 rounded-full bg-primary/10 mx-auto mb-4 flex items-center justify-center">
-                            <span className="text-4xl font-serif text-primary">
-                              {member.name.split(" ").map(n => n[0]).join("")}
-                            </span>
-                          </div>
-                          <p className="text-sm text-muted-foreground">Снимката ще бъде добавена</p>
+                                        <p className="text-sm text-muted-foreground"><img
+                                            src={ member.image }
+                                        /> </p>
                         </div>
                       </div>
-                    </div>
                     
                     {/* Content */}
                     <div className="md:col-span-2 p-8">

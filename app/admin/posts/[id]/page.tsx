@@ -53,19 +53,19 @@ export default function EditPostPage({ params }: { params: Promise<{ id: string 
     router.replace("/admin/posts");
   }
 
-  if (loading) return <div className="p-6">Loading...</div>;
-  if (!post) return <div className="p-6">Not found</div>;
+  if (loading) return <div className="p-6">Зареждане...</div>;
+  if (!post) return <div className="p-6">Няма данни</div>;
 
   return (
     <div className="mx-auto max-w-5xl p-6">
       <div className="flex items-center justify-between gap-3">
         <div>
-          <h1 className="text-2xl font-semibold">Edit post</h1>
+          <h1 className="text-2xl font-semibold">Редактиране на публикация</h1>
           <p className="text-sm text-gray-600">{post.title}</p>
         </div>
 
         <button onClick={onDelete} className="rounded-lg border px-3 py-2 hover:bg-gray-50">
-          Delete
+          Изтриване
         </button>
       </div>
 

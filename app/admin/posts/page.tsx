@@ -49,7 +49,7 @@ export default function AdminPostsPage() {
   }, [])
 
   async function del(id: string) {
-    if (!confirm("Сигурни ли сте, че искате да изтриете този пост?")) return
+    if (!confirm("Сигурни ли сте, че искате да изтриете тази публикация?")) return
 
     const res = await fetch(`/api/admin/posts/${id}`, { method: "DELETE" })
     if (!res.ok) {
@@ -68,15 +68,15 @@ export default function AdminPostsPage() {
           <div className="space-y-1">
             <h1 className="text-3xl font-serif font-bold text-foreground flex items-center gap-3">
               <FileText className="w-8 h-8 text-primary" />
-              Управление на статии
+              Управление на публикации
             </h1>
-            <p className="text-muted-foreground">Създавайте и редактирайте статии</p>
+            <p className="text-muted-foreground">Създавайте и редактирайте публикации</p>
           </div>
 
           <Button asChild>
             <Link href="/admin/posts/new">
               <Plus className="w-4 h-4" />
-              Нова статия
+              Нова публикаця
             </Link>
           </Button>
         </div>
@@ -174,8 +174,8 @@ export default function AdminPostsPage() {
                       <tr>
                         <td className="p-12 text-center text-muted-foreground" colSpan={5}>
                           <FileText className="w-12 h-12 mx-auto mb-3 opacity-50" />
-                          <p className="font-medium">Няма намерени статии</p>
-                          <p className="text-sm mt-1">Създайте нова статия, за да започнете</p>
+                          <p className="font-medium">Няма намерени публикации</p>
+                          <p className="text-sm mt-1">Създайте нова публикаця, за да започнете</p>
                         </td>
                       </tr>
                     )}

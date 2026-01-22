@@ -15,9 +15,11 @@ export default async function Header() {
                     {/* Logo */}
                     <div className="flex-shrink-0">
                         <Link href="/" className="text-xl font-serif font-bold text-primary">
-                            СДРУЖЕНИЕ НА ЮРИСТИТЕ
+                            <>
+                                СДРУЖЕНИЕ НА ЮРИСТИТЕ
+                                <p className="text-xs text-muted-foreground">ВЪВ ВИСШЕТО МЕДИЦИНСКО ОБРАЗОВАНИЕ</p>
+                            </>
                         </Link>
-                        <p className="text-xs text-muted-foreground">ВЪВ ВИСШЕТО МЕДИЦИНСКО ОБРАЗОВАНИЕ</p>
                     </div>
 
                     {/* Desktop Navigation */}
@@ -45,7 +47,7 @@ export default async function Header() {
                         {isAdmin ? (
                             <div className="flex items-center gap-4">
                                 <Link href="/admin/posts" className="text-sm font-medium hover:text-primary transition-colors">
-                                    Статии
+                                    Публикации
                                 </Link>
                                 <LogoutButton />
                             </div>
