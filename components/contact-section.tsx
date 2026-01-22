@@ -2,7 +2,7 @@
 
 import type React from "react"
 
-import { useState } from "react"
+import { useState, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -21,6 +21,7 @@ export default function ContactSection() {
     })
     const [turnstileToken, setTurnstileToken] = useState("")
     const [isSending, setIsSending] = useState(false)
+    const turnstileRef = useRef<any>(null)
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -76,8 +77,10 @@ export default function ContactSection() {
             } as any);
 
             setTurnstileToken("");
+            turnstileRef.current?.reset?.()
         } catch {
             setTurnstileToken("");
+            turnstileRef.current?.reset?.()
             toast.error("Мрежова грешка. Опитай пак.");
         } finally {
             setIsSending(false);
@@ -155,6 +158,7 @@ export default function ContactSection() {
                                     </div>
 
                                     <Turnstile
+                                        userRef={turnstileRef}
                                         sitekey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY!}
                                         onVerify={setTurnstileToken}
                                         onExpire={() => setTurnstileToken("")}

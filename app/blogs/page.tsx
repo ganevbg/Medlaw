@@ -85,7 +85,6 @@ export default async function BlogPage() {
                             <Button asChild size="lg" className="gap-2">
                                 <Link href="/#contact">
                                     Направи запитване
-                                    <ArrowRight className="h-4 w-4" />
                                 </Link>
                             </Button>
                         </div>

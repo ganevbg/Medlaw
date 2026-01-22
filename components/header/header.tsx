@@ -15,7 +15,7 @@ export default async function Header() {
                     {/* Logo */}
                     <div className="flex-shrink-0">
                         <Link href="/" className="text-xl font-serif font-bold text-primary">
-                            <img src="/logo.svg" className="h-12 w-auto" alt="Medlaw" />
+                            <img src="/logo.svg" className="h-20 w-auto" alt="Medlaw" />
                         </Link>
                     </div>
 
