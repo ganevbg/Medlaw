@@ -21,7 +21,7 @@ export default function ContactSection() {
     })
     const [turnstileToken, setTurnstileToken] = useState("")
     const [isSending, setIsSending] = useState(false)
-    const turnstileRef = useRef<any>(null)
+    const [turnstileKey, setTurnstileKey] = useState(0)
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -62,6 +62,7 @@ export default function ContactSection() {
                 } catch { }
 
                 setTurnstileToken("");
+                setTurnstileKey((k) => k + 1)
                 toast.error(msg);
                 return;
             }
@@ -77,10 +78,10 @@ export default function ContactSection() {
             } as any);
 
             setTurnstileToken("");
-            turnstileRef.current?.reset?.()
+            setTurnstileKey((k) => k + 1)
         } catch {
             setTurnstileToken("");
-            turnstileRef.current?.reset?.()
+            setTurnstileKey((k) => k + 1)
             toast.error("Мрежова грешка. Опитай пак.");
         } finally {
             setIsSending(false);
@@ -158,7 +159,7 @@ export default function ContactSection() {
                                     </div>
 
                                     <Turnstile
-                                        userRef={turnstileRef}
+                                        userRef={turnstileKey}
                                         sitekey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY!}
                                         onVerify={setTurnstileToken}
                                         onExpire={() => setTurnstileToken("")}
