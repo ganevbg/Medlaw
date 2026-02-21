@@ -159,7 +159,7 @@ export default function ContactSection() {
                                     </div>
 
                                     <Turnstile
-                                        userRef={turnstileKey}
+                                        key={turnstileKey}
                                         sitekey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY!}
                                         onVerify={setTurnstileToken}
                                         onExpire={() => setTurnstileToken("")}

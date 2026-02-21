@@ -8,7 +8,7 @@ export default function Footer() {
                     {/* Logo & Description */}
                     <div className="md:col-span-2">
                         <h3 className="text-xl font-serif font-bold mb-4">СДРУЖЕНИЕ НА ЮРИСТИТЕ </h3>
-                        <p className="text-sm opacity-80 leading-relaxed mb-4">ВЪВ ВИСШЕТО МЕДИЦИНСКО ОБРАЗОВАНИЕ</p>
+                        <p className="text-sm opacity-80 leading-relaxed mb-4">за медицинското образование, наука и практика</p>
                     </div>
 
                     {/* Quick Links */}
